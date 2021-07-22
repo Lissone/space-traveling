@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+import { FiCalendar, FiUser } from 'react-icons/fi';
 
 import { getPrismicClient } from '../services/prismic';
 
-import commonStyles from '../styles/common.module.scss';
 import styles from '../styles/home.module.scss';
 
 interface Post {
@@ -32,8 +32,34 @@ export default function Home(): JSX.Element {
         <title>SpaceTraveling - Home</title>
       </Head>
 
-      <div>
-        <h1>Testando</h1>
+      <div className={styles.container}>
+        <header>
+          <img src="/logo.png" alt="SpaceTraveling" />
+        </header>
+
+        <main>
+          <div className={styles.post}>
+            <h1>Como utilizar Hooks</h1>
+
+            <span>Pensando em sincronização em vez de ciclos de vida.</span>
+
+            <footer>
+              <div>
+                <FiCalendar />
+
+                <p>15 Mar 2021</p>
+              </div>
+
+              <div>
+                <FiUser />
+
+                <p>Joseph Oliveira</p>
+              </div>
+            </footer>
+          </div>
+
+          <button type="button">Carregar mais posts</button>
+        </main>
       </div>
     </>
   );

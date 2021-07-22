@@ -27,18 +27,31 @@
 
 body {
   background: var(--background);
-  color: var(--heading);
 }
 
 body, input, textarea, select, button {
   font: 400 1rem "Inter", sans-serif;
 }
 
-button {
-  cursor: pointer;
+h1, h2, h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  color: var(--heading);
 }
 
-a {
-  color: inherit;
+span {
+  font-weight: 400;
+  color: var(--body);
+}
+
+p {
+  font-weight: 400;
+  color: var(--info);
+}
+
+button {
+  cursor: pointer;
   text-decoration: none;
+  color: inherit;
 }
