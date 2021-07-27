@@ -9,7 +9,7 @@ import { FiCalendar, FiUser } from 'react-icons/fi';
 import { useState } from 'react';
 import { getPrismicClient } from '../services/prismic';
 
-import { Header } from '../components/Header';
+import Header from '../components/Header';
 
 import styles from '../styles/home.module.scss';
 
@@ -33,7 +33,20 @@ interface HomeProps {
 }
 
 export default function Home({ postsPagination }: HomeProps): JSX.Element {
-  const [posts, setPosts] = useState<Post[]>(postsPagination.results);
+  const formattedPosts = postsPagination.results.map((post: Post) => {
+    return {
+      ...post,
+      first_publication_date: format(
+        new Date(post.first_publication_date),
+        'dd MMM yyyy',
+        {
+          locale: ptBR,
+        }
+      ),
+    };
+  });
+
+  const [posts, setPosts] = useState<Post[]>(formattedPosts);
   const [nextPage, setNextPage] = useState(postsPagination.next_page);
 
   async function handleNextPage(): Promise<void> {
@@ -47,7 +60,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
 
     const newPosts = postsResults.results.map(post => {
       return {
-        slug: post.uid,
+        uid: post.uid,
         first_publication_date: format(
           new Date(post.first_publication_date),
           'dd MMM yyyy',
@@ -124,14 +137,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const posts = postsResponse.results.map(post => {
     return {
-      slug: post.uid,
-      first_publication_date: format(
-        new Date(post.first_publication_date),
-        'dd MMM yyyy',
-        {
-          locale: ptBR,
-        }
-      ),
+      uid: post.uid,
+      first_publication_date: post.first_publication_date,
       data: {
         title: post.data.title,
         subtitle: post.data.subtitle,

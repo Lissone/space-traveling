@@ -16,13 +16,13 @@
       line-height: 5.5rem;
     }
 
-    ul {
+    > ul {
       display: flex;
       align-items: center;
 
       gap: 1rem;
 
-      li {
+       li {
         display: flex;
         align-items: center;
 
@@ -33,20 +33,35 @@
       }
     }
   }
-}
 
-.postContent {
-  padding-top: 3.75rem;
+  article {
+    h2 {
+      margin: 3rem 0;
 
-  h2 {
-    margin-bottom: 3rem;
+      font-size: 2.25rem;
+      color: var(--heading);
+    }
 
-    font-size: 2.25rem;
-  }
+    p, span, a, ul {
+      margin: 1.7rem 0;
 
-  p {
-    font-size: 1.125rem;
+      font-size: 1.125rem;
+      line-height: 1.7rem;
+    }
 
-    line-height: 1.7rem;
+    strong {
+      font-weight: 700;
+      color: var(--body)
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    li {
+      color: var(--body);
+    }
   }
 }
