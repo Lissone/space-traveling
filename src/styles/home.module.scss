@@ -6,6 +6,10 @@
   max-width: 62rem;
   margin: 0 auto;
 
+  div + div {
+    margin-top: 2.5rem;
+  }
+
   button {
     margin-top: 4.5rem;
     padding: 1rem 2rem;
