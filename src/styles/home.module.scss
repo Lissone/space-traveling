@@ -1,29 +1,25 @@
-.container {
+.headerContainer {
+  padding: 1.5rem 0;
+}
+
+.content {
   max-width: 62rem;
   margin: 0 auto;
 
-  header {
-    padding: 3.8rem 0;
-  }
+  button {
+    margin-top: 4.5rem;
+    padding: 1rem 2rem;
 
-  main {
-    width: 100%;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
 
-    button {
-      margin-top: 4.5rem;
-      padding: 1rem 2rem;
+    color: var(--primary);
+    background: transparent;
 
-      border: 1px solid var(--primary);
-      border-radius: 8px;
+    transition: filter 0.4s;
 
-      color: var(--primary);
-      background: transparent;
-
-      transition: filter 0.4s;
-
-      &:hover {
-        filter: brightness(0.7);
-      }
+    &:hover {
+      filter: brightness(0.7);
     }
   }
 }
