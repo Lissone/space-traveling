@@ -20,6 +20,7 @@ import styles from './post.module.scss';
 
 interface Post {
   first_publication_date: string | null;
+  last_publication_date: string | null;
   data: {
     title: string;
     banner: {
@@ -73,6 +74,18 @@ export default function Post({
     }
   );
 
+  const isPostEdited =
+    post.first_publication_date !== post.last_publication_date;
+
+  let editionDate;
+  if (isPostEdited) {
+    editionDate = format(
+      new Date(post.last_publication_date),
+      "'* editado em' dd MMM yyyy', ás ' H':'m",
+      { locale: ptBR }
+    );
+  }
+
   const totalWords = post.data.content.reduce((total, contentItem) => {
     total += contentItem.heading?.split(' ').length || 0;
 
@@ -114,6 +127,8 @@ export default function Post({
               {`${readTime} min`}
             </li>
           </ul>
+
+          {isPostEdited && <span>{editionDate}</span>}
         </header>
 
         {post.data.content.map(content => (
@@ -217,6 +232,7 @@ export const getStaticProps: GetStaticProps = async ({
   const post = {
     uid: response.uid,
     first_publication_date: response.first_publication_date,
+    last_publication_date: response.last_publication_date,
     data: {
       title: response.data.title,
       subtitle: response.data.subtitle,

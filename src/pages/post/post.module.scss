@@ -12,11 +12,14 @@
 
   header {
     h1 {
+      margin-bottom: 2rem;
+
       font-size: 3rem;
-      line-height: 5.5rem;
     }
 
     > ul {
+      margin-bottom: 1rem;
+
       display: flex;
       align-items: center;
 
@@ -31,6 +34,10 @@
 
         color: var(--info);
       }
+    }
+
+    > span {
+      color: var(--info);
     }
   }
 
@@ -71,7 +78,7 @@
   width: 100%;
   height: 1px;
 
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 
   background: var(--body);
 }
@@ -81,6 +88,8 @@
   width: 100%;
 
   margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 
   display: flex;
   align-items: center;
@@ -109,8 +118,6 @@
 
   div {
     width: 100%;
-
-    margin-bottom: 2rem;
   }
 
   div + div {
