@@ -31,7 +31,7 @@
 
 ## Description
 
-Blog for news and tips for developers. Developed as a challenge to establish knowledge with CMS integration, and NextJs fundamentals.
+Blog for news and tips for developers. Developed as a challenge to establish knowledge with CMS integration, and NextJs fundamentals. With prismic post preview in application and comments to git.
 
 
 ## Requirements
