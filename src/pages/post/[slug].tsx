@@ -15,6 +15,7 @@ import { getPrismicClient } from '../../services/prismic';
 
 import Header from '../../components/Header';
 import ExitPreviewButton from '../../components/ExitPreviewButton';
+import Comments from '../../components/Comments';
 
 import styles from './post.module.scss';
 
@@ -171,6 +172,8 @@ export default function Post({
           <div />
         )}
       </section>
+
+      <Comments />
 
       {preview && <ExitPreviewButton />}
     </>
