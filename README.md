@@ -55,8 +55,7 @@ You can view the project layout via this <a href="https://www.figma.com/file/LAT
 
 ## Usage
 
-You can use this project as a template for another one, or clone it on your pc using the command:
-
+You can clone it on your pc using the command:
 ```bash
 git clone https://github.com/Lissone/space-traveling.git
 cd space-traveling
