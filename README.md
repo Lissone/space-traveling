@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="SpaceTraveling" src="./public/logo.png" width="350px">
+  <img alt="SpaceTraveling logo" src="./public/logo.png" width="350px">
 </h1>
 
 <p align="center">
@@ -33,21 +33,21 @@
 
 Blog for news and tips for developers. Developed as a challenge to establish knowledge with CMS integration, and NextJs fundamentals. With prismic post preview in application and comments to git.
 
-
 ## Requirements
 
-* [Yarn](https://yarnpkg.com/)
-* [Nodejs](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/)
 
 ## Technologies
 
-* NextJs
-* Typescript
-* Sass
-* Prismic CMS
-* Jest
-* ESLint
-* Prettier
+- NextJs
+- Typescript
+- Sass
+- Prismic CMS
+- Jest
+- ESLint
+- Prettier
 
 ## Layout
 
@@ -56,28 +56,30 @@ You can view the project layout via this <a href="https://www.figma.com/file/LAT
 ## Usage
 
 You can clone it on your pc using the command:
+
 ```bash
 git clone https://github.com/Lissone/space-traveling.git
 cd space-traveling
 ```
 
 Install dependencies using:
+
 ```bash
 yarn
 #or
-npm run
+npm install
 ```
 
-Need to add environment variables in both projects:
+Need to add environment variables:
 
 ```bash
 # .\.env.local
 PRISMIC_API_ENDPOINT=
 PRISMIC_ACCESS_TOKEN=
-
 ```
 
 Run application:
+
 ```bash
 yarn dev
 #or
